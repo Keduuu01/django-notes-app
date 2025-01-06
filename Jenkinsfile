@@ -20,6 +20,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "This is Testing the code "
+                echo "Testing of code completed"
             }
         }
         stage("Deploy"){
