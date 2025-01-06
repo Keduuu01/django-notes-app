@@ -13,8 +13,9 @@ pipeline{
         }
         stage("Build"){
             steps{
-                echo "This is Building the code"
-                sh "sudo docker build -t notes-app:latest ."
+                script{
+                    build()
+                }
             }
         }
         stage("Test"){
@@ -25,8 +26,9 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                echo "This is Deployment"
-                sh "sudo docker compose up -d"
+                script{
+                    deploy()
+                }
             }
         }
     }
