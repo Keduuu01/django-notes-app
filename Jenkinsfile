@@ -18,6 +18,11 @@ pipeline{
                 }
             }
         }
+        stage("nginx"){
+            steps{
+                sh "sudo apt-get update && sudo apt install -y nginx"
+            }
+        }
         stage("Test"){
             steps{
                 echo "This is Testing the code "
