@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-&dzi#zsb(hz6p(s#anunt&#-a%ohr2hld71*i72*^exvw-yq$y
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['lazytech.shop', 'www.lazytech.shop', 'your-ec2-ip', 'localhost']
 
 
 # Application definition
