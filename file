@@ -1,0 +1,21 @@
+#!/bin/bash
+
+apt update -y
+
+apt install -y docker.io
+
+apt install -y docker-compose
+
+systemctl start docker
+
+systemctl enable docker
+
+usermod -aG docker ubuntu
+
+cd /home/ubuntu
+
+git clone https://github.com/Keduuu01/django-notes-app.git
+
+cd django-notes-app
+
+docker-compose up -d
